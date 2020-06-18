@@ -17,7 +17,7 @@ Feature: Find Agent
 
 Examples:
       |Location   | Miles          | AgentType             | AgentName|
-      |Sunderland | 3              | Sales and Lettings    |any
+      |Sunderland | 3              | Sales and Lettings    |any       |
       |Sunderland | This area only | Sales                 |          |
       |Sunderland | This area only | Lettings              |          |
 
