@@ -2,10 +2,12 @@ package co.uk.rightmove.commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.support.ui.Select;
 import sun.security.mscapi.CPublicKey;
 
 import java.util.concurrent.TimeUnit;
@@ -29,6 +31,7 @@ public class BrowserManager extends DriverManager         //this is used to exte
         return new ChromeDriver(options);                           //this code helps us flash our chrome driver
 
         //code 16 to 23 gives you the code that can not be seen when it runs
+
 
 
 
@@ -77,6 +80,7 @@ public class BrowserManager extends DriverManager         //this is used to exte
             default:
                 driver = initHeadlessChrome();
                 break;
+
 
                 // code 59 to 77 helps selenium to switch between the available browser.
         }

@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
      features =   {"src/test/java/co/uk/rightmove/features"},
         glue ={"co/uk/rightmove/hooks","co/uk/rightmove/stepDefinitions"},
         plugin = {"pretty","json:target/report.json",
-        "de.monochromata.cucumber.report.prettyReports:target/pretty-cucumber"}     // instruction to report pretty using json and storing it in reports using monochromata
+        "de.monochromata.cucumber.report.PrettyReports:target/Pretty-cucumber"}     // instruction to report pretty using json and storing it in reports using monochromata
 
 
         // pretty report: this is a human readable report
