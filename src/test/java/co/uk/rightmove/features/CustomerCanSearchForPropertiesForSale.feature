@@ -15,7 +15,7 @@ Feature: Search property for sale
    And i select "<PropertyType>" from Property type for sale
     And i select "<WhenAddedToSite>" from Added to site
     And i click on Find properties
-#    Then the search for "<Location>" is displayed for sale
+#   Then the search for "<Location>" is displayed for sale
     And i click on one of the search results
 
     Examples:
