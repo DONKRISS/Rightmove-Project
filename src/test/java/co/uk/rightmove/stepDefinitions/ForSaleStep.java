@@ -41,10 +41,12 @@ public class ForSaleStep extends BasePage {
     public void i_select_from_MinPrice_range_for_sale(String MinPrice) {
         homePage.SelectMinimumPrice(MinPrice);
     }
-    @When("i select {string} from maxPrice range for rent")
-    public void i_select_from_MaxPrice_range_for_rent(String MaxPrice) {
-       homePage.SelectMaximumPrice(MaxPrice);
+
+    @When("i select {string} from maxPrice range for sale")
+    public void i_select_from_maxPrice_range_for_sale(String MaxPrice) {
+        homePage.SelectMaximumPrice(MaxPrice);
     }
+
 
     @When("i select {string} from No.of bedrooms for sale")
     public void i_select_from_No_of_bedrooms_for_sale(String beds) {
@@ -70,9 +72,13 @@ public class ForSaleStep extends BasePage {
 
     }
 
-    @Then("the search for {string} is displayed for sale")
-    public void the_search_for_is_displayed_for_sale(String string) {
+//    @Then("the search for {string} is displayed for sale")
+//    public void the_search_for_is_displayed_for_sale(String location) {
+//        searchResultPage.isSearchResultPageDisplayed(location);
+//
+//    }
+    @Then("i click on one of the search results")
+    public void i_click_on_one_of_the_search_results() {
 
     }
-
 }

@@ -15,14 +15,15 @@ Feature: Search property for sale
    And i select "<PropertyType>" from Property type for sale
     And i select "<WhenAddedToSite>" from Added to site
     And i click on Find properties
-    Then the search for "<Location>" is displayed for sale
+#    Then the search for "<Location>" is displayed for sale
+    And i click on one of the search results
 
     Examples:
-      |Location   | SearchRadius        | MinPrice         | MaxPrice          | NoOfBedroomMax     | NoOfBedroomMin           | PropertyType|   WhenAddedToSite
-     |Sunderland  | Within 3 miles       | 60,000           | 140,000          |  3                   |  5                       | Houses        |Last 3 days
-#    |Sunderland | This area only | No min    | £20,000,000   |  No max         |  No min              | Any                                      |             |
+      |Location   | SearchRadius        | MinPrice         | MaxPrice          | NoOfBedroomMax     | NoOfBedroomMin           | PropertyType|   WhenAddedToSite|
+     |Sunderland  | Within 3 miles       | 60,000           | 140,000          |  3                   |  5                       | Houses        |Last 3 days  |
+     #    |Sunderland | This area only | No min    | £20,000,000   |  No max         |  No min              | Any                                      |             |
 #     |Sunderland | This area only | 50,000   | No max   |  No max                             |  No min                       | Any        |
-#      |Sunderland | This area only | 50,000   | 20,000,000   |  No max                        |  No min                     | Any        |
+#     |Sunderland | This area only | 50,000   | 20,000,000   |  No max                        |  No min                     | Any        | Anytime    |
 #      |Sunderland | Within 5 miles              | No min    | No max   |  No max               |  No min                    | Any         |
 #      |Sunderland | This area only | No min    | No max   |  5                                 |  No min                        | Any         |
 #      |Sunderland | Within 1/4 miles | No min    | No max   |  No max                            |  Studio                        | Any         |
