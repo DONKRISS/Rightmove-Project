@@ -74,6 +74,8 @@ public class ForSaleStep extends BasePage {
 
     }
 
+
+    //code below is to sellect only one property
 //    @Then("the search for {string} is displayed for sale")
 //    public void the_search_for_is_displayed_for_sale(String location) {
 //        searchResultPage.isSearchResultPageDisplayed(location);
@@ -84,6 +86,10 @@ public class ForSaleStep extends BasePage {
     public void i_click_on_one_of_the_search_results() {
        // productDetailpage=searchResultPage.clickOnTheFirstResult();
         productDetailpage = searchResultPage.clickOnAnyResult();
+
+
+
+
 
 
 
