@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+import java.util.Random;
+
 public class SearchResultPage extends BasePage
 {
     public SearchResultPage(WebDriver driver)                           // you must write this code for every page you create and its called a constructor
@@ -21,6 +24,8 @@ public class SearchResultPage extends BasePage
     }
     @FindBy(tagName = "hi")
     private WebElement pageTitle;
+    @FindBy(className= "propertyCard-title")
+    private List<WebElement> results;
 
 
     public void  doesPageTitleContains(String location)
@@ -28,4 +33,23 @@ public class SearchResultPage extends BasePage
         String title = pageTitle.getText();
         Assert.assertTrue(title.contains(location));   //ths is is the code to ensure that the page shows the location
     }
+
+//    public ProductDetailpage clickOnTheFirstResult()
+//    {
+//        results.get(0).click();
+//        return new ProductDetailpage((driver));
+//    }
+
+
+    public ProductDetailpage clickOnAnyResult()
+    {
+        int noOfElement = results.size();
+        Random random=new Random();
+        int ranNumber = random.nextInt(noOfElement - 1);
+
+
+        results.get(ranNumber).click();
+        return new ProductDetailpage((driver));
+    }
+
 }
