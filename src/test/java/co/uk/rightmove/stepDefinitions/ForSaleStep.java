@@ -16,6 +16,7 @@ public class ForSaleStep extends BasePage {
     SearchResultPage searchResultPage = PageFactory.initElements(driver,SearchResultPage.class);  //introcuces the search result page created from homepage
     ProductDetailpage productDetailpage = PageFactory.initElements(driver,ProductDetailpage.class);
 
+
     @Given("i navigate to Rightmove homepage")
     public void i_navigate_to_Rightmove_homepage() {
         homePage.launchURL();
@@ -75,24 +76,11 @@ public class ForSaleStep extends BasePage {
     }
 
 
-    //code below is to sellect only one property
-//    @Then("the search for {string} is displayed for sale")
-//    public void the_search_for_is_displayed_for_sale(String location) {
-//        searchResultPage.isSearchResultPageDisplayed(location);
-//        searchResultPage.doesPageTitleContains(location);
-//
-//    }
     @Then("i click on one of the search results")
     public void i_click_on_one_of_the_search_results() {
+
        // productDetailpage=searchResultPage.clickOnTheFirstResult();
         productDetailpage = searchResultPage.clickOnAnyResult();
-
-
-
-
-
-
-
 
     }
 }

@@ -24,7 +24,6 @@ public class SearchResultPage extends BasePage
     }
     @FindBy(tagName = "hi")
     private WebElement pageTitle;
-
     @FindBy(className= "propertyCard-title")
     private List<WebElement> results;
 
@@ -34,6 +33,7 @@ public class SearchResultPage extends BasePage
         String title = pageTitle.getText();
         Assert.assertTrue(title.contains(location));   //ths is is the code to ensure that the page shows the location
     }
+
 //    public ProductDetailpage clickOnTheFirstResult()
 //    {
 //        results.get(0).click();
@@ -51,4 +51,5 @@ public class SearchResultPage extends BasePage
         results.get(ranNumber).click();
         return new ProductDetailpage((driver));
     }
+
 }
